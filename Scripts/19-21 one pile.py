@@ -13,7 +13,7 @@ from functools import lru_cache
 WINAMOUNT = 63
 
 def moves(s):
-    return s + 1, s + 4, s * 5
+    return s + 1, s + 4, s * 5 # варианты действий
 
 
 @lru_cache(None)
