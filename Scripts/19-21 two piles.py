@@ -12,7 +12,7 @@
 
 from functools import lru_cache
 
-WINAMOUNT = 63
+WINAMOUNT = 20
 
 def moves(s):
     a, b = s
@@ -23,7 +23,7 @@ def moves(s):
 def game(s):
     a, b = s
     
-    if s >= WINAMOUNT: return "W"
+    if a+b >= WINAMOUNT: return "W"
     if any(game(m) == "W" for m in moves(s)): return "P1"
     if all(game(m) == "P1" for m in moves(s)): return "V1"
     if any(game(m) == "V1" for m in moves(s)): return "P2"
@@ -31,6 +31,8 @@ def game(s):
     
     
 for i in range(1, 500):
+    s = 
+    
     if game(i) == "V1":
         print(i, game(i))
         
