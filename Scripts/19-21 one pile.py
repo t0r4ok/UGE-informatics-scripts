@@ -38,6 +38,6 @@ def f(stones, turn):
 
 
 # первый ход делает Петя
-print('19)', [stones for stones in range(1, 435) if f(stones, 2)])
-print('20)', [stones for stones in range(1, 435) if not f(stones, 1) and f(stones, 3)])
-print('21)', [stones for stones in range(1, 435) if not f(stones, 2) and f(stones, 4)])
+print('19)', [s for s in range(1, 435) if f(s, 2)])
+print('20)', [s for s in range(1, 435) if not f(s, 1) and f(s, 3)])
+print('21)', [s for s in range(1, 435) if not f(s, 2) and f(s, 4)])
