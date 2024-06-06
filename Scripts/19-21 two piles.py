@@ -30,9 +30,10 @@ def f(pileA, pileB, turns):
         f(pileA, pileB * 2, turns - 1),
     ]
     return any(actions) if (turns - 1) % 2 == 0 else all(actions)
+    # return any(actions) if (turns - 1) % 2 == 0 else any(actions) <-- Это только для номера 19!
 
 
-# первый ход делает Петя/
+# первый ход делает Петя
 print('19)', [s for s in range(1, 54) if f(5, s, 2)])  # 14
 print('20)', [s for s in range(1, 54) if not f(5, s, 1) and f(5, s, 3)])  # 24, 26
 print('21)', [s for s in range(1, 54) if not f(5, s, 2) and f(5, s, 4)])  # 23
